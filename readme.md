@@ -1,4 +1,4 @@
-# Boilerplate for JS tasks
+# Get operands from Math expression
 
 **Read the guideline before start**
 

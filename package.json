@@ -1,8 +1,8 @@
 {
-  "name": "js-task-boilerplate",
+  "name": "get-operands",
   "version": "1.0.0",
-  "description": "js task boilerplate",
-  "main": "src/sum.js",
+  "description": "Get operands from Math expression",
+  "main": "src/getOperands.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint **/*.js"
