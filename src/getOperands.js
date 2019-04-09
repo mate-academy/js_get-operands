@@ -11,9 +11,10 @@
  * '-2 - 2'
  *
  * Allowed operators: '+', '-', '*', '/'.
- * Allowed whitespaces near operator and numbers.
- * Numbers can be floating (1.2, 2.354).
- * Negative number has '-' behind without whitespace (-2, -2.354).
+ * Whitespaces around operator and numbers are allowed.
+ * Numbers can be floats (1.2, 2.354).
+ * Negative numbers have a minus sign '-' before them without whitespace.
+ * (-2, -2.354).
  *
  * getOperands('1 + 2') === 'a: 1, b: 2';
  * getOperands('1.2 * -3.4') === 'a: 1.2, b: 3.4';
