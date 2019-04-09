@@ -1,0 +1,31 @@
+'use strict';
+
+/**
+ * Implement getOperands function:
+ *
+ * Function takes string which is Math expression of 2 numbers and returns it's
+ * operands in the next format: 'a: <first_operand>, b: <second_operand>'.
+ *
+ * Given string is a math operation which contains 2 numbers (operands) and
+ * operator (*, /, +, -). For example: '1 + 2',  '1.2 * -3.4',  '-3 / -6',
+ * '-2 - 2'
+ *
+ * Allowed operators: '+', '-', '*', '/'.
+ * Allowed whitespaces near operator and numbers.
+ * Numbers can be floating (1.2, 2.354).
+ * Negative number has '-' behind without whitespace (-2, -2.354).
+ *
+ * getOperands('1 + 2') === 'a: 1, b: 2';
+ * getOperands('1.2 * -3.4') === 'a: 1.2, b: 3.4';
+ * getOperands('1 - 2') === 'a: 1, b: 2';
+ * getOperands('1 - -2') === 'a: 1, b: -2';
+ *
+ * @param {string} str
+ *
+ * @return {string} - operands
+ */
+function getOperands(str) {
+  // write code here
+}
+
+module.exports = getOperands;
