@@ -17,7 +17,7 @@
  * (-2, -2.354).
  *
  * getOperands('1 + 2') === 'a: 1, b: 2';
- * getOperands('1.2 * -3.4') === 'a: 1.2, b: 3.4';
+ * getOperands('1.2 * -3.4') === 'a: 1.2, b: -3.4';
  * getOperands('1 - 2') === 'a: 1, b: 2';
  * getOperands('1 - -2') === 'a: 1, b: -2';
  *
