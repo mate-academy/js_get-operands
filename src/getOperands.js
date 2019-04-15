@@ -26,7 +26,8 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  let nambersArray = str.match(/-?\d+(\.\d+)?/g);
+  return 'a: ' + nambersArray[0] + ', b: ' + nambersArray[1];
 }
 
 module.exports = getOperands;
