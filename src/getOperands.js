@@ -26,7 +26,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  let check = /[+-]?([0-9]*[.])?[0-9]+/g;
+  let time = str.match(check);
+  return `a: ${time[0]}, b: ${time[1]}`;
 }
 
 module.exports = getOperands;
