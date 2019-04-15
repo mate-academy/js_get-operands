@@ -26,7 +26,7 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const number = str.match(/[-]?\d(\.\d)?/g);
+  const number = str.match(/[-]?\d\.\d|[-]?\d/g);
   let result = `a: ${number[0]}, b: ${number[1]}`;
   return result;
 }
