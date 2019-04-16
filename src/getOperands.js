@@ -27,6 +27,11 @@
  */
 function getOperands(str) {
   // write code here
+  let firstOperand = /^.?\d.\d|^.?\d/.exec(str);
+  let secondOperand = /\S\d.\d$|\d.\d$|\S\d$|\d$/.exec(str);
+  return 'a: ' + firstOperand + ', b: ' + secondOperand;
 }
+
+getOperands('1.2 * 3.4');
 
 module.exports = getOperands;
