@@ -27,8 +27,9 @@
  */
 function getOperands(str) {
   let arr = [];
-  arr = str.match(/-?\d+(?:\.\d+)?/g);
-  return `a: ${arr[0]}, b: ${arr[1]}`;
+  let reg = /(-?\d(?:.\d)?)\s[+|\-|*|/]\s(-?\d(?:.\d)?)/g;
+  arr = reg.exec(str);
+  return `a: ${arr[1]}, b: ${arr[2]}`;
 }
 
 module.exports = getOperands;
