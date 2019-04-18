@@ -27,7 +27,7 @@
  */
 function getOperands(str) {
   let arr = [];
-  let reg = /(-?\d(?:.\d)?)\s[+|\-|*|/]\s(-?\d(?:.\d)?)/g;
+  let reg = /(-?\d(?:.\d)?)\s[+-/*]\s(-?\d(?:.\d)?)/g;
   arr = reg.exec(str);
   return `a: ${arr[1]}, b: ${arr[2]}`;
 }
