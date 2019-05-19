@@ -27,6 +27,8 @@
  */
 function getOperands(str) {
   // write code here
+  let operands = str.match(/-?\d(\.\d+)?/g);
+  return `a: ${operands[0]}, b: ${operands[1]}`;
 }
 
 module.exports = getOperands;
