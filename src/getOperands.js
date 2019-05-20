@@ -27,8 +27,9 @@
  */
 function getOperands(str) {
   // write code here
-  let operands = str.match(/-?\d(\.\d+)?/g);
+  const operands = str.match(/-?\d(\.\d+)?/g);
   return `a: ${operands[0]}, b: ${operands[1]}`;
 }
+// console.log(getOperands('1.0999 + 2.8885'));
 
 module.exports = getOperands;
