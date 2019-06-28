@@ -25,8 +25,10 @@
  *
  * @return {string} - operands
  */
-function getOperands(str) {
-  // write code here
-}
+const getOperands = (str) => {
+  const operands = str.split(' ');
+
+  return `a: ${operands[0]}, b: ${operands[2]}`;
+};
 
 module.exports = getOperands;
