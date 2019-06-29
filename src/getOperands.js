@@ -26,7 +26,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const regect = /\s(-|\+|\*|\/)\s/;
+  const arrOperands = str.replace(regect, ' ').split(' ');
+  return `a: ${arrOperands[0]}, b: ${arrOperands[1]}`;
 }
 
 module.exports = getOperands;
