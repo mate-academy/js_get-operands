@@ -26,7 +26,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  let numbersExpression = /[+-]?([0-9]*[.])?[0-9]+/g;
+  let operands = str.match(numbersExpression);
+  return `a: ${operands[0]}, b: ${operands[1]}`;
 }
 
 module.exports = getOperands;
