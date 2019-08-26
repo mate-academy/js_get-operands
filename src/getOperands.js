@@ -26,7 +26,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const operands = /(-\d|[\d]?\.[\d]?|\d)+/g;
+
+  return `a: ${str.match(operands)[0]}, b: ${str.match(operands)[1]}`;
 }
 
 module.exports = getOperands;
