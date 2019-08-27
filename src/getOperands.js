@@ -26,8 +26,8 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const arr = str.split(' ');
-  return 'a: ' + arr[0] + ', b: ' + arr[2];
+  const arr = str.match(/(-?\d+(\.\d+)?)/g);
+  return 'a: ' + arr[0] + ', b: ' + arr[1];
 }
 
 module.exports = getOperands;
