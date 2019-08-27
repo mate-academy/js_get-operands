@@ -27,6 +27,7 @@
  */
 function getOperands(str) {
   // write code here
+  return str.replace(/(.?\d.*) .* (\d*)/, 'a: $1, b: $2');
 }
 
 module.exports = getOperands;
