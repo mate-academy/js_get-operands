@@ -26,7 +26,8 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const intermidiateArr = str.split(/.[-+*/]./);
+  return `a: ${intermidiateArr[0]}, b: ${intermidiateArr[1]}`;
 }
 
 module.exports = getOperands;
