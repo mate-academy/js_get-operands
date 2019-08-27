@@ -27,9 +27,8 @@
  */
 function getOperands(str) {
   const result = str.replace(/(?<=\s)(\+|-|\*|\/|)(?=\s)/).split(' undefined ');
+
   return 'a: ' + result[0] + ', ' + 'b: ' + result[1];
 }
 
 module.exports = getOperands;
-
-getOperands('-2 + -2');
