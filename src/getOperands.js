@@ -26,9 +26,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const patt = /\s?(-?\d{1,}(\.\d{1,})?)\s?[+\-*/]\s?(-?\d{1,}(\.\d{1,})?)\s?/;
-  const fisrtOperand = str.match(patt)[1];
-  const secondOperand = str.match(patt)[3];
+  const pattern = /(-?\d(\.\d)?)\s[+\-*/]\s(-?\d(\.\d)?)/;
+  const fisrtOperand = str.match(pattern)[1];
+  const secondOperand = str.match(pattern)[3];
   return `a: ${fisrtOperand}, b: ${secondOperand}`;
 }
 
