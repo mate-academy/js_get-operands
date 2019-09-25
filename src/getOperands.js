@@ -26,7 +26,12 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  let a = 'a: ';
+  let b = 'b: ';
+  const findNumbers = str.match(/-{0,9}\d*\.{0,9}\d+/g);
+  a += findNumbers[0] + ', ';
+  b += findNumbers[1];
+  return a + b;
 }
 
 module.exports = getOperands;
