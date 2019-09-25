@@ -26,7 +26,10 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const operands = /-{0,1}\d*\.{0,1}\d+/g;
+  const operandsStr = str.match(operands).join(', ');
+  const finalStr = 'a: ' + operandsStr.replace(' ', ' b: ');
+  return finalStr;
 }
 
 module.exports = getOperands;
