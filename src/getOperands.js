@@ -26,10 +26,8 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const deleteOperand = str.replace(/ [/*+-] /, ' ');
-  const expressionNumbers = deleteOperand.split(' ');
-
-  return `a: ${expressionNumbers[0]}, b: ${expressionNumbers[1]}`;
+  const strNumbers = str.match(/-?\d(.\d)?/g);
+  return `a: ${strNumbers[0]}, b: ${strNumbers[1]}`;
 }
 
 module.exports = getOperands;
