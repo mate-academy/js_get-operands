@@ -26,7 +26,10 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const requiredRegex = /[-+]?[0-9]*[.,]?[0-9]+(?:[eE][-+]?[0-9]+)?/g;
+  const operands = str.match(requiredRegex);
+
+  return 'a: ' + operands[0] + ', ' + 'b: ' + operands[1];
 }
 
 module.exports = getOperands;
