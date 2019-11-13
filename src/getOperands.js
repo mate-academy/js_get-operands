@@ -26,7 +26,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const strSplitted = str.split(/\s[+\-*/]\s/);
+
+  return (`a: ${strSplitted[0]}, b: ${strSplitted[1]}`);
 }
 
 module.exports = getOperands;
