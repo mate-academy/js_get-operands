@@ -26,7 +26,7 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const regExp = /\s\D\s/g;
+  const regExp = /\s[-+/*]\s/g;
   const resultArr = str.split(regExp);
   return ('a: ' + resultArr[0] + ', ' + 'b: ' + resultArr[1]);
 }
