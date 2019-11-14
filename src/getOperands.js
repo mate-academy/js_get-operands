@@ -26,12 +26,12 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const pattern1 = /^(\-?\d+\.?\d?)/;
-  const pattern2 = /(\-?\d+\.?\d?)$/;
-  const firstOperand = str.match(pattern1);
-  const secondOperand = str.match(pattern2);
+  const pattern = /((?<=(\s|))\-?\d+\.?\d?)/g;
+  const matches = str.match(pattern);
+  console.log(matches);
 
-  return 'a: ' + firstOperand[0] + ', b: ' + secondOperand[0];
+
+  return 'a: ' + matches[0] + ', b: ' + matches[1];
 }
 
 module.exports = getOperands;
