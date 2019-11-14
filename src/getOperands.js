@@ -28,8 +28,6 @@
 function getOperands(str) {
   const pattern = /((?<=(\s|))\-?\d+\.?\d?)/g;
   const matches = str.match(pattern);
-  console.log(matches);
-
 
   return 'a: ' + matches[0] + ', b: ' + matches[1];
 }
