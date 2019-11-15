@@ -26,7 +26,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const reg = new RegExp(/\s[-/*+]\s/g);
+  const result = str.split(reg);
+  return (`a: ${result[0]}, b: ${result[1]}`);
 }
 
 module.exports = getOperands;
