@@ -28,9 +28,8 @@
 function getOperands(str) {
   const pattern = /\s[*+-/]\s/g;
   const digits = str.replace(pattern, ' ').split(/\s/);
-  const operands = 'a: ' + digits[0] + ', ' + 'b: ' + digits[1];
 
-  return operands;
+  return 'a: ' + digits[0] + ', ' + 'b: ' + digits[1];
 }
 
 module.exports = getOperands;
