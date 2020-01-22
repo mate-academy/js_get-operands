@@ -25,6 +25,7 @@
  *
  * @return {string} - operands
  */
+
 function getOperands(str) {
   const pattern = /-?\d+(.\d+)?/g;
   const operands = str.match(pattern);
