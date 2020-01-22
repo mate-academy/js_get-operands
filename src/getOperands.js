@@ -32,6 +32,4 @@ function getOperands(str) {
   return `a: ${matches[1]}, b: ${matches[3]}`;
 }
 
-getOperands('1 * -3');
-
 module.exports = getOperands;
