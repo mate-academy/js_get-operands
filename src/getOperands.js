@@ -26,7 +26,6 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
   const arrOnlyNumbers = str.replace(/\B(\+|-|\*|\/)\B/g, '');
   const separateNumber = arrOnlyNumbers.split(' ');
 
