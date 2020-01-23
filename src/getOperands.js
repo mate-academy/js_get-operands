@@ -27,6 +27,10 @@
  */
 function getOperands(str) {
   // write code here
+  const arrOnlyNumbers = str.replace(/\B(\+|-|\*|\/)\B/g, '');
+  const separateNumber = arrOnlyNumbers.split(' ');
+
+  return 'a: ' + separateNumber[0] + ', b: ' + separateNumber[2];
 }
 
 module.exports = getOperands;
