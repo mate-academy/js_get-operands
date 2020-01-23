@@ -26,9 +26,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const arrOnlyNumbers = str.replace(/\B(\+|-|\*|\/)\B/g, '').split(' ');
+  const digits = str.replace(/\B(\+|-|\*|\/)\B/g, '').split(' ');
 
-  return `a: ${arrOnlyNumbers[0]}, b: ${arrOnlyNumbers[2]}`;
+  return `a: ${digits[0]}, b: ${digits[2]}`;
 }
 
 module.exports = getOperands;
