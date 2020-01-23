@@ -26,10 +26,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const arrOnlyNumbers = str.replace(/\B(\+|-|\*|\/)\B/g, '');
-  const separateNumber = arrOnlyNumbers.split(' ');
+  const arrOnlyNumbers = str.replace(/\B(\+|-|\*|\/)\B/g, '').split(' ');
 
-  return 'a: ' + separateNumber[0] + ', b: ' + separateNumber[2];
+  return `a: ${arrOnlyNumbers[0]}, b: ${arrOnlyNumbers[2]}`;
 }
 
 module.exports = getOperands;
