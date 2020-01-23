@@ -27,21 +27,13 @@
  */
 function getOperands(str) {
   const pattern = /[*\-+/](?!\S)/;
-  let result = str.split(pattern);
+  const digits = str.split(pattern);
+  const aCharCode = 97;
+  const result = [];
 
-  result = result.map((digit, index) => {
-    let num;
-
-    if (index === 0) {
-      num = digit.trim();
-      num = `a: ${num}`;
-    } else if (index === 1) {
-      num = digit.trim();
-      num = `b: ${num}`;
-    }
-
-    return num;
-  });
+  for (let i = 0; i < digits.length; i++) {
+    result.push(`${String.fromCharCode((aCharCode + i))}: ${digits[i].trim()}`);
+  }
 
   return result.join(', ');
 }
