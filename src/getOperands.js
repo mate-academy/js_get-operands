@@ -26,7 +26,11 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const regExOperand = /(?:-\d\S\d|\d\S\d)|-\d|\d/g;
+  const listOperands = str.match(regExOperand);
+  const resultingLine = `a: ${listOperands[0]}, b: ${listOperands[1]}`;
+
+  return resultingLine;
 }
 
 module.exports = getOperands;
