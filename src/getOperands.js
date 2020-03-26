@@ -26,7 +26,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const arr = str.split(' ');
+
+  return 'a: ' + arr[0] + ', b: ' + arr[2];
 }
 
 module.exports = getOperands;
