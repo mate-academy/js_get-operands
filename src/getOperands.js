@@ -26,8 +26,8 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const nums = /[-+]?[0-9]*[.,]?[0-9]/g;
-  const operands = str.match(nums);
+  const numbersMask = /[-+]?[0-9]*[.,]?[0-9]+/g;
+  const operands = str.match(numbersMask);
 
   return `a: ${operands[0]}, b: ${operands[1]}`;
 }
