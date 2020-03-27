@@ -26,7 +26,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const digits = /[-]?[(\d.\d)]+/g;
+
+  return 'a: ' + str.match(digits)[0] + ', ' + 'b: ' + str.match(digits)[1];
 }
 
 module.exports = getOperands;
