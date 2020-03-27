@@ -28,7 +28,7 @@
 function getOperands(str) {
   const arr = str.split(' ');
 
-  return 'a: ' + arr[0] + ', b: ' + arr[2];
+  return `a: ${arr[0]}, b: ${arr[2]}`;
 }
 
 module.exports = getOperands;
