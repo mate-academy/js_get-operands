@@ -27,7 +27,7 @@
  */
 function getOperands(str) {
   const srtWitoutOperators
-   = str.match(/-[0-9].[0-9]|[0-9].[0-9]|-[0-9]|[0-9]/g);
+   = str.match(/-(\d+)\.\d*|(\d+)\.\d*|-\d|\d/g);
   const operands1 = srtWitoutOperators[0];
   const operands2 = srtWitoutOperators[1];
   const res = 'a: ' + operands1 + ', b: ' + operands2;
