@@ -27,6 +27,19 @@
  */
 function getOperands(str) {
   // write code here
+  let a = "a: ";
+  let b = "b: ";
+  let operands = ", ";
+  let pattern = /\B[-|+|*|/]\B/gm;
+  let indexSign = str.search(pattern);
+  for (let i = indexSign + 2; i < str.length; i++) {
+    b = b + str[i];
+  }
+  for (let i = 0; i < indexSign - 1; i++) {
+    a = a + str[i];
+  }
+  operands = a + operands + b;
+  return operands;
 }
 
 module.exports = getOperands;
