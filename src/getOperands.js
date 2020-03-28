@@ -26,8 +26,8 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const reg1 = /^[-]?[0-9][.]?(?:[0-9])?/;
-  const reg2 = /[-]?[0-9][.]?(?:[0-9])?$/;
+  const reg1 = /^[-]?[0-9]*[.]?[0-9]+(?:[-]?[0-9]+)?/;
+  const reg2 = /[-]?[0-9]*[.]?[0-9]+(?:[-]?[0-9]+)?$/;
   const a = str.match(reg1);
   const b = str.match(reg2);
 
