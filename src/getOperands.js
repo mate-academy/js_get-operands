@@ -26,10 +26,10 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const pattern = (/((-|)(\d\.\d|\d))/g);
-  const arrNumb = str.match(pattern);
+  const pat = /((?:-|)(?:\d|\d.\d))\s(?:\+|-|\*|\/)\s((?:-|)(?:\d.\d|\d))/;
+  const arrNumb = str.match(pat);
 
-  return `a: ${arrNumb[0]}, b: ${arrNumb[1]}`;
+  return `a: ${arrNumb[1]}, b: ${arrNumb[2]}`;
 }
 
 module.exports = getOperands;
