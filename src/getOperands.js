@@ -26,10 +26,10 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const regexp = /(-?\d\.?\d?) . (-?\d\.?\d?)/;
+  const regexp = /(-?\d\.?\d?)/g;
   const arr = str.match(regexp);
 
-  return 'a: ' + arr[1] + ',' + ' b: ' + arr[2];
+  return 'a: ' + arr[0] + ',' + ' b: ' + arr[1];
 }
 
 module.exports = getOperands;
