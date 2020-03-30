@@ -26,7 +26,7 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const regexp = /(-(?=\d))?([.\d]+)/g;
+  const regexp = /(-?[\d.\d]+)(?=\s\W)|(?<=\W\s)(-?[\d.\d]+)/g;
   const matchedValues = str.match(regexp);
   const operands = `a: ${matchedValues[0]}, b: ${matchedValues[1]}`;
 
