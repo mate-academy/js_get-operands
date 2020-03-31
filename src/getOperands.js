@@ -26,7 +26,10 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  return str.replace(/(-?\d+(\.\d+)?) [+*-/] (-?\d+(\.\d+)?)/,
+    (match, p1, p2, p3) => {
+      return 'a: ' + p1 + ', b: ' + p3;
+    });
 }
 
 module.exports = getOperands;
