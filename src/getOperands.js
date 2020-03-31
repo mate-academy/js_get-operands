@@ -26,7 +26,7 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const pattern = str.match(/-?\d\.?\d?/g);
+  const pattern = str.match(/-?\d+\.?\d*/g);
 
   return `a: ${pattern[0]}, b: ${pattern[1]}`;
 }
