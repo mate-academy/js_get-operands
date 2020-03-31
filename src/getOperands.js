@@ -26,7 +26,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const correctValue = str.split(' ');
+
+  return `a: ${correctValue[0]}, b: ${correctValue[2]}`;
 }
 
 module.exports = getOperands;
