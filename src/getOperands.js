@@ -26,9 +26,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const correctValue = str.split(' ');
+  const correctValue = str.match(/(-?\d(?:.\d)?)\s[+*/-]\s(-?\d(?:.\d)?)/);
 
-  return `a: ${correctValue[0]}, b: ${correctValue[2]}`;
+  return `a: ${correctValue[1]}, b: ${correctValue[2]}`;
 }
 
 module.exports = getOperands;
