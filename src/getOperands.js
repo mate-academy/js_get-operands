@@ -26,7 +26,7 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  return str.split(/\s[/|+|*|-]\s/).join(', b: ').replace(/^/, 'a: ');
 }
 
 module.exports = getOperands;
