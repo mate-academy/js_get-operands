@@ -26,7 +26,8 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  let cache = str.split(' ');
+  return "a: " + cache[0] + ", " + "b: " + cache[2]
 }
 
 module.exports = getOperands;
