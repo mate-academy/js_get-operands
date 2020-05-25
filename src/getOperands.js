@@ -26,7 +26,10 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const regExprsion = /-*\d+\.*\d*/g;
+  const result = str.match(regExprsion);
+
+  return 'a: ' + result[0] + ', b: ' + result[1];
 }
 
 module.exports = getOperands;
