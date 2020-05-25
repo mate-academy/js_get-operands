@@ -26,7 +26,7 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const operands = str.match(/(?:-)?\d(?:\.)?(?:\d{1,6})?/g);
+  const operands = str.match(/(?:-)?(\d{1,})(?:\.)?(?:\d{1,})?/g);
 
   return 'a: ' + operands[0] + ', b: ' + operands[1];
 }
