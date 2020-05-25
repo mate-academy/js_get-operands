@@ -26,7 +26,13 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const regEx = /-?\d\.?\d*\s(\+|-|\*|\/)\s-?\d\.?\d*/g;
+  const regExToSplit = /\s\D\s/g;
+  const matchArray = str.match(regEx).join('').split(regExToSplit);
+
+  return `a: ${matchArray[0]}, b: ${matchArray[1]}`;
 }
+
+// console.log(getOperands('-2 + -2'));
 
 module.exports = getOperands;
