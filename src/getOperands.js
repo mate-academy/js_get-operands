@@ -26,7 +26,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const digits = str.replace(/\B(\+|-|\*|\/)\B/g, '').split(' ');
+
+  return `a: ${digits[0]}, b: ${digits[2]}`;
 }
 
 module.exports = getOperands;
