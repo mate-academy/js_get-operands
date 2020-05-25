@@ -26,7 +26,10 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const regularOfFloat = /-?\d+[.]?[\d+]?/g;
+  const operandsArray = str.match(regularOfFloat);
+
+  return `a: ${operandsArray[0]}, b: ${operandsArray[1]}`;
 }
 
 module.exports = getOperands;
