@@ -8,8 +8,8 @@ test('1 + 2', () => {
 });
 
 test('1.2 * -3.4', () => {
-  expect(getOperands('1.2 * -3.4'))
-    .toBe('a: 1.2, b: -3.4');
+  expect(getOperands('1.222 * -3.4'))
+    .toBe('a: 1.222, b: -3.4');
 });
 
 test('-3 / -6', () => {

@@ -26,7 +26,7 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const res = str.match(/(-\d[.]\d|\d[.]\d|-\d|\d)/g);
+  const res = str.match(/(-\d\.\d|\d\.\d|-\d|\d)+\b/g);
 
   return `a: ${res[0]}, b: ${res[1]}`;
 }
