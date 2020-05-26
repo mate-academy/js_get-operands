@@ -26,15 +26,15 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  let arr = [];
-  // eslint-disable-next-line no-useless-escape
-  const reg = /\d+(\.\d+|)|\-\d+(\.\d+|)/g;
+  let operands = [];
 
-  arr = str.match(reg);
-  arr[0] = 'a: ' + arr[0];
-  arr[1] = ' b: ' + arr[1];
+  const getOperandsPattern = /\d+(\.\d+|)|-\d+(\.\d+|)/g;
 
-  return arr.join();
+  operands = str.match(getOperandsPattern);
+  operands[0] = 'a: ' + operands[0];
+  operands[1] = ' b: ' + operands[1];
+
+  return operands.join();
 }
 
 module.exports = getOperands;
