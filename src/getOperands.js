@@ -26,7 +26,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  return str.split(/\s[/|+|*|-]\s/).join(', b: ').replace(/^/, 'a: ');
+  const matches = str.split(/\s[/|+|*|-]\s/);
+
+  return `a: ${matches[0]}, b: ${matches[1]}`;
 }
 
 module.exports = getOperands;
