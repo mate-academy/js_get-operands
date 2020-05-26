@@ -26,7 +26,10 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const operandA = str.match(/-?\d?.?\d(?=\s[*/+-])/)[0];
+  const operandB = str.match(/(?<=[*/+-]\s)-?\d.?\d?/)[0];
+
+  return 'a: ' + operandA + ', b: ' + operandB;
 }
 
 module.exports = getOperands;
