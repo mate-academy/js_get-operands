@@ -26,10 +26,11 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const operandA = str.match(/-?\d?.?\d(?=\s[*/+-])/)[0];
-  const operandB = str.match(/(?<=[*/+-]\s)-?\d.?\d?/)[0];
+  // const operandA = str.match(/-?\d?.?\d(?=\s[*/+-])/)[0];
+  const operands = str.match(/(.+) [*/+-] (.+)/);
+  // const operandB = str.match(/(?<=[*/+-]\s)-?\d.?\d?/)[0];
 
-  return 'a: ' + operandA + ', b: ' + operandB;
+  return 'a: ' + operands[1] + ', b: ' + operands[2];
 }
-
+getOperands('1.2 - -2');
 module.exports = getOperands;
