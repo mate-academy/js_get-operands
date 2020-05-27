@@ -26,8 +26,10 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  let cache = str.split(' ');
-  return "a: " + cache[0] + ", " + "b: " + cache[2]
+  const regexp = /(-?\d+\.\d+|-?\d+)\b/g;
+  const operand = str.match(regexp);
+
+  return `a: ${operand[0]}, b: ${operand[1]}`;
 }
 
 module.exports = getOperands;
