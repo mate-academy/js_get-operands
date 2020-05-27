@@ -27,9 +27,9 @@
  */
 function getOperands(str) {
   const pattern = /-?\d{1,}(\.\d{1,})?/g;
-  const patternMatch = str.match(pattern);
+  const matches = str.match(pattern);
 
-  return `a: ${patternMatch[0]}, b: ${patternMatch[1]}`;
+  return `a: ${matches[0]}, b: ${matches[1]}`;
 }
 
 module.exports = getOperands;
