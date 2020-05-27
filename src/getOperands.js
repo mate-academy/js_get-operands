@@ -26,8 +26,8 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  const regExprsion = /-*\d+\.*\d*/g;
-  const result = str.match(regExprsion);
+  const regExpresion = /-*\d+\.*\d*/g;
+  const result = str.match(regExpresion);
 
   return 'a: ' + result[0] + ', b: ' + result[1];
 }
