@@ -29,7 +29,7 @@ function getOperands(str) {
   const regExpresion = /-*\d+\.*\d*/g;
   const matches = str.match(regExpresion);
 
-  return 'a: ' + matches[0] + ', b: ' + matches[1];
+  return `a: ${matches[0]}, b: ${matches[1]}`;
 }
 
 module.exports = getOperands;
