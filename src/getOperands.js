@@ -27,9 +27,9 @@
  */
 function getOperands(str) {
   const getOperandsPattern = /\d+(\.\d+|)|-\d+(\.\d+|)/g;
-  const operand = str.match(getOperandsPattern);
+  const operands = str.match(getOperandsPattern);
 
-  return `a: ${operand[0]}, b: ${operand[1]}`;
+  return `a: ${operands[0]}, b: ${operands[1]}`;
 }
 
 module.exports = getOperands;
