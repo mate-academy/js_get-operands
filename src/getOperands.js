@@ -32,4 +32,3 @@ function getOperands(str) {
 }
 
 module.exports = getOperands;
-// console.log(getOperands('1.2 * -3.4'));
