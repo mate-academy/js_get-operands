@@ -26,7 +26,11 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const arr = str.match(/(\b|-)\d.?\d?/g);
+
+  return arr.length
+    ? `a: ${arr[0].replace(/\s/g, '')}, b: ${arr[1].replace(/\s/g, '')}`
+    : '';
 }
 
 module.exports = getOperands;
