@@ -26,7 +26,11 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  // eslint-disable-next-line max-len
+  const patern = /(?<first_operand>-?\d+(\.\d+)?)\s[+-/*]\s(?<second_operand>-?\d+(\.\d+)?)/;
+  const avalibility = str.match(patern).groups;
+
+  return `a: ${avalibility.first_operand}, b: ${avalibility.second_operand}`;
 }
 
 module.exports = getOperands;
