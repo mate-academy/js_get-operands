@@ -26,7 +26,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const valueTemplate = /\s?(-?\d*(?:\.\d*)?)\s?[+\-*/]\s?(-?\d*(?:\.\d*)?)\s?/;
+  const result = valueTemplate.exec(str);
+  return `a: ${result[1]}, b: ${result[2]}`;
 }
 
 module.exports = getOperands;
