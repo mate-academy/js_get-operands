@@ -27,6 +27,9 @@
  */
 function getOperands(str) {
   // write code here
+  const regExr = /-{0,1}\b\d(?:\.\d+){0,1}\b/g;
+
+  return `a: ${regExr.exec(str)[0]}, b: ${regExr.exec(str)[0]}`;
 }
 
 module.exports = getOperands;
