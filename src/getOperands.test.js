@@ -13,8 +13,8 @@ test('1.2 * -3.4', () => {
 });
 
 test('-3 / -6', () => {
-  expect(getOperands('-3 / -6'))
-    .toBe('a: -3, b: -6');
+  expect(getOperands('-322.22 / -6'))
+    .toBe('a: -322.22, b: -6');
 });
 
 test('-2 - 2', () => {
