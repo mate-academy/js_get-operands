@@ -25,8 +25,11 @@
  *
  * @return {string} - operands
  */
+
 function getOperands(str) {
-  // write code here
+  const regexp = /(-?\d+(\.\d+)?)\s([+*-/])\s(-?\d+(\.\d+)?)/;
+
+  return str.replace(regexp, 'a: $1, b: $4');
 }
 
 module.exports = getOperands;
