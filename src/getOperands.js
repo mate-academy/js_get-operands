@@ -26,7 +26,16 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const pattern = /[*\-+/](?!\S)/;
+  const digits = str.split(pattern);
+  const aCharCode = 97;
+  const result = [];
+
+  for (let i = 0; i < digits.length; i++) {
+    result.push(`${String.fromCharCode((aCharCode + i))}: ${digits[i].trim()}`);
+  }
+
+  return result.join(', ');
 }
 
 module.exports = getOperands;
