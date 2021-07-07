@@ -1,4 +1,7 @@
 {
+  "jest": {
+    "testEnvironment": "node"
+  },
   "name": "get-operands",
   "version": "1.0.0",
   "description": "Get operands from Math expression",
