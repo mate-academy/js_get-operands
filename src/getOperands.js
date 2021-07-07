@@ -26,7 +26,16 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const aStr = str.match(/^(-*\d*\.*\d*)/g);
+  const bStr = str.match(/(-*\d*\.*\d*)$/g);
+  //  Пришлось удалить последний элемент массива для всех,
+  //  потому что при выводе
+  //  был массив пустым значнием (нашел в дебагере) и к
+  //  ответу приписывалась запятая.
+
+  bStr.pop();
+
+  return `a: ${aStr}, b: ${bStr}`;
 }
 
 module.exports = getOperands;
