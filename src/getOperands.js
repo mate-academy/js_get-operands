@@ -27,6 +27,9 @@
  */
 function getOperands(str) {
   // write code here
+  const pattern = /\s?\B[-|+|*|/]\B/gm;
+
+  return 'a: ' + str.replace(pattern, ', b:');
 }
 
 module.exports = getOperands;
