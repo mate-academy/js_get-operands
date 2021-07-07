@@ -26,7 +26,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const rule = /(-?\d+(.\d+)?) [+/*-] (-?\d+(.\d+)?)/g;
+
+  return str.replace(rule, 'a: $1, b: $3');
 }
 
 module.exports = getOperands;
