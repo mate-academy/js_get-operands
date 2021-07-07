@@ -1,6 +1,7 @@
 'use strict';
 
 /**
+ * fs_on_dec19_salogubova
  * Implement getOperands function:
  *
  * Function takes a string which is Math expression of 2 numbers and returns
@@ -26,7 +27,9 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
-}
+  const reg = /(-?\b\d\.?)+/g;
+  const operands = str.match(reg);
 
+  return `a: ${+operands[0]}, b: ${+operands[1]}`;
+}
 module.exports = getOperands;
