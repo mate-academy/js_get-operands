@@ -27,6 +27,9 @@
  */
 function getOperands(str) {
   // write code here
+  const regExp = /(?:\b|-)\d.\d|(?:\b|-)\d/g;
+
+  return `a: ${str.match(regExp)[0]}, b: ${str.match(regExp)[1]}`;
 }
 
 module.exports = getOperands;
