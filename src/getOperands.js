@@ -26,7 +26,13 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const srtWitoutOperators
+   = str.match(/-(\d+)\.\d*|(\d+)\.\d*|-\d|\d/g);
+  const operands1 = srtWitoutOperators[0];
+  const operands2 = srtWitoutOperators[1];
+  const res = 'a: ' + operands1 + ', b: ' + operands2;
+
+  return res;
 }
 
 module.exports = getOperands;
