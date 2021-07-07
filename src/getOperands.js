@@ -26,7 +26,14 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  // write code hre
+  const regA = RegExp(/^-?.*(?=\s[*+-/]\s)/);
+  const regB = RegExp(/(?<=\s[*/+-]\s)-?.*$/);
+
+  const firstOperand = 'a: ' + str.match(regA);
+  const secondperand = 'b: ' + str.match(regB);
+
+  return `${firstOperand}, ${secondperand}`;
 }
 
 module.exports = getOperands;
