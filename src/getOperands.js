@@ -26,7 +26,11 @@
  * @return {string} - operands
  */
 function getOperands(str) {
-  // write code here
+  const temp = str.split(/[*+/-](?= )/g).map(e => e.trim());
+  temp[0] = `a: ${temp[0]}`;
+  temp[1] = ` b: ${temp[1]}`;
+
+  return temp.join();
 }
 
 module.exports = getOperands;
